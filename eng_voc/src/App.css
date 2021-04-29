@@ -1,0 +1,562 @@
+/* .App { */
+  /* text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* my styling */
+body{
+  background-image: url(./images/k8.jpg);
+  background-size: cover;
+}
+.flip-card {
+  background-color: transparent;
+  
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  margin-left: 350px;
+  padding: 20px;
+  margin-top: 160px;
+  width: 600px;
+  height: 400px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: white;
+  color:black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  color: black;
+  
+}
+.flip-card-back header b{
+  color: black;
+
+  font-size: 22px;
+  margin-right: 290px;
+  /* margin-left: 10px; */
+}
+.flip-card-back label{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  margin-top: 5px;
+  color: #202020;
+
+}
+.flip-card-back button{
+  /* margin-left: 200px; */
+  margin-top: 0px;
+  border-radius: 8px;
+  width: 160px;
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+  color:white;
+  background: purple;
+  float: right;
+  border: none;
+
+}
+.time{
+  margin-top: 0px;
+  margin-left: 360px;
+  font-size: 30px;
+}
+.name{
+  font-size: 40px;
+  margin-top: 40px;
+}
+.para{
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+
+.word header{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  text-align: center;
+  margin-top: 70px;
+  font-size: 45px;
+}
+.pic{
+  width: 180px;
+  height: 90px;
+  margin-top:0px;
+  
+}
+.word .button{
+  margin-left: 190px;
+  margin-top: 30px;
+  border-radius: 8px;
+  width: 190px;
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  background-color: purple;
+  border: none;
+}
+/* css related to home page */
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.nav1{
+  float:left;
+  margin-left: 90px;
+  width:35%;
+}
+.nav1 a{
+  font-size: 24px;
+  font-variant: small-caps;
+}
+.nav2{
+  float:right;
+  width:55%;
+  margin-left: 40px;
+  
+  
+}
+.navbar a {
+  color: rgb(16, 16, 61);
+  
+  font-weight: bold;
+  padding: 14px 34px 14px 34px;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  
+  color: violet;
+}
+
+/* Main content */
+.main {
+  margin-top: 0px; /* Add a top margin to avoid content overlay */
+}
+
+
+
+.pic1{
+  top: 0;
+  margin-left: 0px;
+  margin-top: 0px;
+  width: 550px;
+  height: 650px;
+}
+.card1 .card-right{
+  float: right;
+  width: 45%;
+}
+.card1 .card-left{
+  float: left;
+  width: 45%;
+}
+.card-left h1{
+  
+  margin-top: 230px;
+  margin-left: 80px;
+  padding: 4px ;
+  color: white;
+}
+.card-left p{
+  font-size: 27px;
+  margin-left: 80px;
+  padding: 4px ;
+  color: white;
+}
+ .button2{
+  width: 170px;
+  height: 70px;
+  font-size: 22px;
+  margin-top: 45px;
+  margin-left: 80px;
+  padding: 4px ;
+  border-radius: 5%;
+  background-color: white;
+  color: #000066;
+  border: none;
+}
+.exams{
+  top: 0;
+  margin-left: 0px;
+  margin-top: 50px;
+  width: 550px;
+  height: 650px;
+}
+.card2 .card2-right{
+  float: right;
+  width: 45%;
+}
+.card2 .card2-left{
+  float: left;
+  width: 45%;
+}
+.card2-right h1{
+  color: white;
+
+}
+.card2-right p{
+  color: white;
+  margin-top: 40px;
+  font-size: 20px;
+  
+}
+.communicating{
+  top: 0;
+  margin-left: 0px;
+  margin-top: 50px;
+  width: 550px;
+  height: 650px;
+
+}
+.card3 .card3-right{
+  float: right;
+  width: 45%;
+}
+.card3 .card3-left{
+  float: left;
+  width: 45%;
+}
+.card3-left h1{
+  color: white;
+
+}
+.card3-left p{
+  color: white;
+  margin-top: 40px;
+  font-size: 20px;
+  
+}
+.navbar1 {
+  overflow: hidden;
+  background-color: rgb(16, 16, 61); /* Set the navbar to fixed position */
+   /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar1 a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 30px 10px 450px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar1 a:hover {
+  background: #ddd;
+  color: navy;
+}
+
+/* Main content */
+.main1 {
+  margin-top: 0px; /* Add a top margin to avoid content overlay */
+}
+
+
+/* styling to signup page */
+   
+.main {
+  background-color: #FFFFFF;
+  width: 400px;
+  height: 400px;
+  margin: 7em auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign {
+  padding-top: 40px;
+  color: #8C55AA;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 23px;
+}
+
+.un {
+width: 80%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 15px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 10%;
+margin-left: 10%;
+
+/* text-align: center; */
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+  padding-top: 40px;
+}
+
+.pass {
+      width: 80%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 10%;
+margin-left: 10%;
+/* text-align: center; */
+margin-bottom: 50px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+  border: 2px solid rgba(0, 0, 0, 0.18) !important;
+  
+}
+
+.submit {
+cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #9C27B0, #b436ca);
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 20px;
+  margin-left: 120px;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #E1BEE7;
+  padding-top: 15px;
+  margin-top: 10px;
+  margin-left: 140px;
+}
+
+a {
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #E1BEE7;
+  text-decoration: none
+}
+
+@media (max-width: 600px) {
+  .main {
+      border-radius: 0px;
+  }
+}
+  
+/* styling to register page */
+
+
+.post .p{
+  padding-top: 40px;
+  color:#000066;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  padding-bottom: 0px;
+}
+.post form {
+  /* width: 30rem;
+  display: block;
+  margin: 3rem auto;
+  padding: 3rem;
+  border: 1px solid #999;
+  background-color: white; */
+  background-color: #FFFFFF;
+  width: 515px;
+  height: 515px;
+  margin-left: 27em;
+  border-radius: 1.5em;
+  margin-top: 67px;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.post label {
+  display: block;
+  margin-right: 355px;
+  transform: translate(0, -2.75rem);
+  
+}
+
+.post input {
+  width: 80%;
+  margin-top: 0.75rem;
+  padding: 0.60rem;
+  border: none;
+  font-size: 18px;
+  text-align: left;
+  border-bottom: 2px solid grey;
+  transition: border-color 0.2s ease;
+}
+
+.post input:focus {
+    outline: none;
+    border-color: #000066;
+}
+
+
+
+
+.post .submit1 {
+  border-radius: 5em;
+  background-color: white; 
+  color: #000066; 
+  border: 2px solid #000066;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 10px;
+  margin-left: 4%;
+  font-size: 18px;
+}
+/* 
+.submit1:hover {
+  background:rgb(48, 48, 255);
+  color: white;
+} */
+
+
+
+@supports (not (-ms-ime-align:auto)) {
+    label {
+      color: #999;
+      transform: translate(0.55rem, -1.5rem);
+      transition: all 0.2s ease-out;
+    }
+    
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      color: #999;
+      transform: translate(0, -3.75rem);
+    }
+}
+.main1 {
+  background-color: #FFFFFF;
+  width: 550px;
+  height: 500px;
+  margin: 5em auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign1 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: #8C55AA;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  text-align: center;
+  
+}
+
+.submit1 {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #b436ca);
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 20px;
+    margin-left: 180px;
+    font-size: 18px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
