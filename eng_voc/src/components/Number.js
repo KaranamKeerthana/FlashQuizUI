@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 // Attributes
-const NO_OF_SECONDS = 25
+const NO_OF_SECONDS = 90
 
 
 
