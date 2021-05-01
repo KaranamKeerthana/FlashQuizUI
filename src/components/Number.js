@@ -1,8 +1,8 @@
 
 
-import pic from './images/k6.png';
 import React, { Component } from 'react';
-import axios from 'axios';
+import {URLS} from './environment/Urls';
+import {Link} from "react-router-dom";
 
 
 // Attributes
@@ -48,45 +48,30 @@ class Number extends Component {
   }
 
   async componentDidMount() {
-    const headers = {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json',
-      "Access-Control-Allow-Headers" : "Content-Type",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
-    }    
-    // axios.get('http://127.0.0.1:8000/display/')
-  //   fetch('http://127.0.0.1:8000/display/')
-  //   .then(response=>{
-
-  //     console.log(response.json());
-  //     // this.setState({posts:response.data})
-  //   })
-    // .catch(error=>{
-    //   console.log(error)
-    // })
-    // let timeLeftVar = this.secondsToTime(this.state.seconds);
-    // this.setState({ time: timeLeftVar });
-    // this.startTimer()
-  // }
-
-  try{
-    const response = await fetch('http://127.0.0.1:8000/display/');
-    const jsons=await response.json();
-    console.log(jsons.data);
-    var i ;
-    for (i=0;i<jsons.data.length;i++){
-      jsons.data[i].count=i+1
-      this.state.posts.push(jsons.data[i]);
+    // const headers = {
+    //   'Accept': 'application/json, text/plain, */*',
+    //   'Content-Type': 'application/json',
+    //   "Access-Control-Allow-Headers" : "Content-Type",
+    //   "Access-Control-Allow-Origin": "*",
+    //   "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+    // }    
+    try{
+      const response = await fetch(URLS.displayURL);
+      const jsons=await response.json();
+      console.log(jsons.data);
+      var i ;
+      for (i=0;i<jsons.data.length;i++){
+        jsons.data[i].count=i+1
+        this.state.posts.push(jsons.data[i]);
+      }
     }
-  }
-  catch(error){
-    console.log(error);
-  }
+    catch(error){
+      console.log(error);
+    }
   
-  let timeLeftVar = this.secondsToTime(this.state.seconds);
-  this.setState({ time: timeLeftVar });
-  this.startTimer()
+    let timeLeftVar = this.secondsToTime(this.state.seconds);
+    this.setState({ time: timeLeftVar });
+    this.startTimer()
   
   }
   
@@ -128,11 +113,18 @@ class Number extends Component {
 
 
   render(){
-    const{ posts }=this.state
     return(
       <div>
+        <div>
+          <Link to={{pathname:"/"}}>
+            <button style={{border:"none",padding:"10px",marginTop:"30px",marginLeft:"30px",backgroundColor:"purple",color:"white",borderRadius:"5px"}}>
+                Home
+            </button>
+          </Link>
+        </div>
+        <div>
         {
-          this.state.posts.map((items,index)=>{
+          this.state.posts.map((items)=>{
             if (items.count === this.globalCount){
               if (this.state.isflipped === true ){
                 return(
@@ -171,8 +163,8 @@ class Number extends Component {
           })
         } 
       </div>
+    </div>
     );
-
   }
 }
 

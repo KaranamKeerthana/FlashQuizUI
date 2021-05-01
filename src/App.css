@@ -41,6 +41,7 @@
 body{
   background-image: url(./images/k8.jpg);
   background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .flip-card {
   background-color: transparent;

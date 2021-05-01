@@ -3,31 +3,22 @@ import pic1 from './images/k9.svg'
 import undraw_exams_g4ow from './images/undraw_exams_g4ow.svg'
 import undraw_social_interaction_cy9i from './images/undraw_social_interaction_cy9i.svg'
 import undraw_professor_8lrt from './images/undraw_professor_8lrt.svg'
-import undraw_reading_time_gvg0 from './images/undraw_reading_time_gvg0.svg'
 import undraw_Notebook_re_id0r from './images/undraw_Notebook_re_id0r.svg'
-import {Link} from "react-router-dom"
-import axios from 'axios';
+import {Link} from "react-router-dom";
+import './Home.css';
 
 class Home extends Component {
     
     render() {
         return (
             <div>
-                <div class="navbar">
-                    <div className='nav1'>
-                    <a href="#home">FlashQuiz</a>
-                    </div>
-                    <div className="nav2">
-                    
-                    
-                    
-                    <a ><Link to={{pathname:"/register"}}>Register Words</Link></a>
-                    <a ><Link to={{pathname:"/signIn"}}>SignIn</Link></a>
-                    <a ><Link to={{pathname:"/signUp"}}>SignUp</Link></a>
-                    
-
-                    </div>
-
+                <div >
+                    <ul>
+                        <li><a className="header" ><Link to={{pathname:"/"}}><b>FlashQuiz</b></Link></a></li>
+                        <li style={{float:"right"}}><a><Link to={{pathname:"/signIn"}}>SignIn</Link></a></li>
+                        <li style={{float:"right"}}><a><Link to={{pathname:"/signUp"}}>SignUp</Link></a></li>
+                        <li style={{float:"right"}}><a><Link to={{pathname:"/register"}}>Register Words</Link></a></li>
+                    </ul>
                 </div>
                 <div className="card1">
                 <div className="card-right">
