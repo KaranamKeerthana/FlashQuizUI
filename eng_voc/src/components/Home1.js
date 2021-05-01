@@ -4,11 +4,15 @@ import undraw_exams_g4ow from './images/undraw_exams_g4ow.svg'
 import undraw_social_interaction_cy9i from './images/undraw_social_interaction_cy9i.svg'
 import undraw_professor_8lrt from './images/undraw_professor_8lrt.svg'
 import undraw_reading_time_gvg0 from './images/undraw_reading_time_gvg0.svg'
-import undraw_Notebook_re_id0r from './images/undraw_Notebook_re_id0r.svg'
+import { withRouter } from 'react-router-dom';
 import {Link} from "react-router-dom"
 import axios from 'axios';
 
-class Home extends Component {
+class Home1 extends Component {
+    logout() {
+        window.localStorage.clear();
+        window.location.href = '/';
+    }
     
     render() {
         return (
@@ -19,12 +23,9 @@ class Home extends Component {
                     </div>
                     <div className="nav2">
                     
-                    
-                    
-                    <a ><Link to={{pathname:"/register"}}>Register Words</Link></a>
-                    <a ><Link to={{pathname:"/signIn"}}>SignIn</Link></a>
-                    <a ><Link to={{pathname:"/signUp"}}>SignUp</Link></a>
-                    
+                    <Link to={{pathname:"/register"}}><a >Register Words</a></Link>
+                    <Link to={{pathname:"/display"}}><a >Words List</a></Link>
+                    <Link to={{pathname:"#"}}><a  onClick={this.logout}>Logout</a></Link>
 
                     </div>
 
@@ -78,7 +79,7 @@ class Home extends Component {
                 </div>
                 <div className="card3">
                     <div className='card3-right'>
-                        <img src={undraw_Notebook_re_id0r} alt="exams" className='communicating'></img>
+                        <img src={undraw_reading_time_gvg0} alt="exams" className='communicating'></img>
                     </div>
                     <div className='card3-left'>
                         
@@ -97,4 +98,4 @@ class Home extends Component {
     }
 }
 
-export default Home
+export default Home1

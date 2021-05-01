@@ -1,8 +1,8 @@
-/* .App { */
-  /* text-align: center;
-}
+/* .App {
+  text-align: center;
+} */
 
-.App-logo {
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -256,6 +256,7 @@ body{
 .card2 .card2-right{
   float: right;
   width: 45%;
+  margin-right: 10px;
 }
 .card2 .card2-left{
   float: left;
@@ -286,6 +287,7 @@ body{
 .card3 .card3-left{
   float: left;
   width: 45%;
+  margin-left: 10px;
 }
 .card3-left h1{
   color: white;
@@ -559,4 +561,30 @@ a {
     margin-left: 180px;
     font-size: 18px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
+
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 140px;
+    margin-top: 30px;
+    color: white;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* #customers tr:nth-child{background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;} */
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: white;
+    color: #000066;
   }

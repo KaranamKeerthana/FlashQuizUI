@@ -29,7 +29,8 @@ function PostForm(){
         })
         .then(res=>{
             // console.log(res.data)
-            alert(res.data)
+            alert(res.data);
+            window.location.href = 'http://localhost:3000/';
         })
 
     }
