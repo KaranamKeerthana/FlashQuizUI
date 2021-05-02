@@ -1,7 +1,7 @@
 # FlashQuiz 
 
 - This is the ui part of the FlashQuiz app developed in Reactjs
-- This has the backend which was developed in Django.
+- This has the backend which was developed in Django. Please check FlashQuiz in the same profile.
 
 ### What is FlashQuiz
 - FlashQuiz is for learning vocabulary just like flash cards.

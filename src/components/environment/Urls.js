@@ -7,7 +7,7 @@ const URLS = {
     displayURL: `${baseURL}/display`,
     signInURL: `${baseURL}/signin/`,
     signUpURL: `${baseURL}/signup/`,
-    createURL: ``,
+    allDataURL : `${baseURL}/getData/`,
 }
 
 const frontURLS = {
